@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import json
 import urllib2
 base_url = "http://9gag.com"
-url = "http://9gag.tv/api/index/LJEGX?ref_key=a9zzvq&count=50&direction=1&includeSelf=0"
+url = "http://9gag.tv/api/index/LJEGX?ref_key=9a8BV&count=50&direction=1&includeSelf=0"
 
 
 nsfwcount = 0  
