@@ -1,1 +1,1 @@
-http://9gag.tv/api/index/LJEGX?ref_key=5g2EX&count=50&direction=1&includeSelf=0
+http://9gag.tv/api/index/LJEGX?ref_key=KGloV&count=50&direction=1&includeSelf=0

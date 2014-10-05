@@ -1,12 +1,13 @@
 from bs4 import BeautifulSoup
 import json
+import webbrowser
 import urllib2
 base_url = "http://9gag.com"
 url = ""
 
 
 nsfwcount = 0  
-for i in range(1,50):
+for i in range(1,5):
     file = open('url.txt','r')
     url = file.read()
     file.close()
@@ -37,6 +38,7 @@ for i in range(1,50):
     file = open('110.html','a')
     file.write(html)
     file.close()
+webbrowser.open('110.html')
     
 
 
