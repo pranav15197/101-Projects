@@ -2,11 +2,15 @@ from bs4 import BeautifulSoup
 import json
 import urllib2
 base_url = "http://9gag.com"
-url = "http://9gag.tv/api/index/LJEGX?ref_key=9a8BV&count=50&direction=1&includeSelf=0"
+url = ""
 
 
 nsfwcount = 0  
 for i in range(1,50):
+    file = open('url.txt','r')
+    url = file.read()
+    file.close()
+   
     html=''
     s = urllib2.urlopen(url)
     s = s.read()
@@ -26,8 +30,10 @@ for i in range(1,50):
         if j==50:
             nexturl = post['nextPostId']
     url = "http://9gag.tv/api/index/LJEGX?ref_key="+nexturl+"&count=50&direction=1&includeSelf=0"
-    print url
-    print nsfwcount
+    file = open('url.txt','w')
+    file.write(url)
+    file.close()
+    
     file = open('110.html','a')
     file.write(html)
     file.close()

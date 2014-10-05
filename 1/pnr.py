@@ -10,8 +10,7 @@ br.open(url)
 
 br.select_form("pnrForm")
 pnr = raw_input('enter pnr: ')
-br['lccp_pnrno1'] = pnr#"8328145921"
-
+br['lccp_pnrno1'] = pnr
 
 response = br.submit()
 
@@ -24,6 +23,9 @@ for tr in soup.findAll('b'):
         print"booking status ",
     elif i==3:
         print"current status ",
-    print tr.getText()
-    if i==3 :
+        i = 0
+    if tr.getText() == "travel insurance online":
         break
+    else:
+        print tr.getText()
+    
