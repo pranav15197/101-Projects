@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import sys
 from Tkinter import *
 def mHello():
@@ -40,3 +41,20 @@ mGui.mainloop()
 
 #mLable = Label(text='mylable',fg='red',bg='blue').place(x=200,y=220)#fg means foreground,bg is background
 #mSecLable = Label(text='my2ndlable',fg='red',bg='blue').pack()#fg means foreground,bg is background
+=======
+import Tkinter as tk
+
+class Application(tk.Frame):
+    def __init__(self, master=None):
+        tk.Frame.__init__(self, master)
+        self.grid()
+        self.createWidgets()
+
+    def createWidgets(self):
+        self.quitButton = tk.Button(self, text='Quit', command=self.quit)
+        self.quitButton.grid()
+
+app = Application()
+app.master.title('Sample application')
+app.mainloop()
+>>>>>>> f5bd88d1cf4cb45fb0b548ea10eb3c64265849db
