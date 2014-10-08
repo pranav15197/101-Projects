@@ -11,7 +11,7 @@ br.open(url)
 br.select_form("pnrForm")
 pnr = raw_input('enter pnr: ')
 br['lccp_pnrno1'] = pnr
-
+print "fetching pnr status..."
 response = br.submit()
 
 r =  response.read()
